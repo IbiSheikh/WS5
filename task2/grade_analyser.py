@@ -55,7 +55,7 @@ for line in lines:
           
           student_id = data[0]
                
-          grades = [float(grade) for grade in data[1:] if grade.replace('.', '', 1).isdigit()]
+          grades = [float(grade) for grade in data[1:] if grade.replace('.','',1).isdigit()]
           
           if grades:
                average_grade = sum(grades)/ len(grades)
@@ -64,7 +64,7 @@ for line in lines:
 
           classification = grade_to_classifiction(average_grade)
 
-          output_data.append(f"{student_id}, {average_grade:.2f}, {classification}")
+          output_data.append(f"{student_id},{average_grade:.2f},{classification}")
 
 output_file_name = input_file_name + "_out.csv"
 
